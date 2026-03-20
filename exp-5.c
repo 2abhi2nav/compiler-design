@@ -2,9 +2,7 @@
 
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 
 
 void E(int *); void Ec(int *); void T(int *); void Tc(int *); void F(int *);
@@ -22,8 +20,6 @@ int keyword(const char *word) {
     }
     return 0;
 }
-
-
 
 void end_block(int *flag_p) {
     
