@@ -1,7 +1,7 @@
 
-#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 void E(int *);
 void Ec(int *);
@@ -46,7 +46,6 @@ void Tc(int *flag_p) {
 void F(int *flag_p) {
 	if (*cursor == '(') {
 		cursor++;
-
 		E(flag_p);
 
 		if (*cursor == ')') {
@@ -64,14 +63,13 @@ void F(int *flag_p) {
 }
 
 int main() {
-	char input[20];
+	char input[120];
 	fgets(input, sizeof(input), stdin);
 
 	input[strcspn(input, "\n")] = 0;
 	cursor = input;
 
 	int flag = 1;
-
 	E(&flag);
 
 	if (*cursor == '\0' && flag == 1) {

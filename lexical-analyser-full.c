@@ -110,17 +110,20 @@ int main() {
 				op_counts[0]++;
 				strcpy(temp.type, "arithmetic");
 				symbol_table[token_index++] = temp;
-			} else if (is_relational(token)) {
+			}
+			else if (is_relational(token)) {
 				printf("<%s, relational_op> ", token);
 				op_counts[1]++;
 				strcpy(temp.type, "relational");
 				symbol_table[token_index++] = temp;
-			} else if (is_number(token)) {
+			}
+			else if (is_number(token)) {
 				op_counts[2]++;
 				strcpy(temp.type, "constant");
 				temp.value = atoi(token);
 				symbol_table[token_index++] = temp;
-			} else if (is_identifier(token)) {
+			}
+			else if (is_identifier(token)) {
 				op_counts[3]++;
 				strcpy(temp.type, "identifier");
 				symbol_table[token_index++] = temp;
